@@ -2,9 +2,9 @@
 shanbei-user-front-vue
 
 #### 技术选型
-构建工具vite
-框架Vue
-组件库Vant
+脚手架：Vue CLI 用来快速初始化项目。
+构建工具：vite 用来快速初始化项目。
+组件库：Vant
 
 
 # Vue 3 + TypeScript + Vite
