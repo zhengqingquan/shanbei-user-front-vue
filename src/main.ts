@@ -6,7 +6,6 @@ import { Button, Icon, NavBar, Tabbar, TabbarItem } from "vant";
 import * as VueRouter from "vue-router";
 import routes from "./config/route";
 
-
 // 创建路由实例并传递 `routes` 配置
 // 你可以在这里输入更多的配置，但我们在这里
 // 暂时保持简单
