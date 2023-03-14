@@ -6,7 +6,7 @@
   <van-cell title="头像" is-link to="/user/edit">
     <img style="height: 48px" :src="user.avatarUrl"/>
   </van-cell>
-  <van-cell title="性别" is-link to="/user/edit" :value="user.gender"/>
+  <van-cell title="性别" is-link to="/user/edit" :value="user.gender" @click="toEdit('gender','性别',user.gender)"/>
   <van-cell title="电话" is-link to="/user/edit" :value="user.phone"/>
   <van-cell title="手机" is-link to="/user/edit" :value="user.phone"/>
   <van-cell title="邮箱" is-link to="/user/edit" :value="user.email"/>
@@ -14,7 +14,8 @@
 
 </template>
 
-<script setup>
+<script setup lang="ts">
+
 const user = {
   id: 1,
   username: "shanbei",
@@ -25,6 +26,23 @@ const user = {
   email: "@qq.com",
   createTime: new Date(),
 }
+
+import {useRouter,useRoute} from "vue-router";
+
+// useRouter()是用来跳转路由
+const router = useRouter();
+
+const toEdit =(editKey:string,editName:string, currentValue:string)=>{
+  router.push({
+    path:'/user/edit',
+    query:{
+      editKey,
+      editName,
+      currentValue,
+    }
+  })
+}
+
 </script>
 
 <style scoped>

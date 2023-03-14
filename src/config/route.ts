@@ -2,6 +2,7 @@ import Index from "../pages/Index.vue";
 import Team from "../pages/TeamPage.vue";
 import User from "../pages/UserPage.vue";
 import SearchPage from "../pages/SearchPage.vue";
+import UserEditPage from "../pages/EditUserPage.vue";
 import WorldMap from "../pages/WorldMap.vue"
 
 // 定义一些路由
@@ -11,6 +12,8 @@ const routes = [
   { path: "/team", component: Team },
   { path: "/user", component: User },
   { path: "/search", component: SearchPage },
+  // 动态路由
+  {path:"/user/edit/:",component: UserEditPage}
   // {path:"/WorldMap",component: WorldMap},
 ];
 
