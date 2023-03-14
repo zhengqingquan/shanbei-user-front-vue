@@ -1,6 +1,6 @@
 import Index from "../pages/Index.vue";
-import Team from "../pages/Team.vue";
-import User from "../pages/User.vue";
+import Team from "../pages/TeamPage.vue";
+import User from "../pages/UserPage.vue";
 import SearchPage from "../pages/SearchPage.vue";
 import WorldMap from "../pages/WorldMap.vue"
 
