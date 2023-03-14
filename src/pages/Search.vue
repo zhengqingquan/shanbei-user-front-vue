@@ -1,3 +1,5 @@
+<!--搜索页面-->
+
 <template>
   <form action="/">
     <van-search
