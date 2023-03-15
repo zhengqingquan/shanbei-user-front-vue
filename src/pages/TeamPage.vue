@@ -4,10 +4,8 @@
   队伍
 </template>
 
-<script>
-export default {
-  name: "team"
-}
+<script setup>
+
 </script>
 
 <style scoped>

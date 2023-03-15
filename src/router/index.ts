@@ -1,3 +1,0 @@
-// const routes:Array<RouteRecordRaw>={
-//
-// }
