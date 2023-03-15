@@ -11,7 +11,6 @@
   <van-cell title="手机" is-link to="/user/edit" :value="user.phone"/>
   <van-cell title="邮箱" is-link to="/user/edit" :value="user.email"/>
   <van-cell title="创建日期" :value="user.createTime.toDateString()"/>
-
 </template>
 
 <script setup lang="ts">
@@ -27,11 +26,12 @@ const user = {
   createTime: new Date(),
 }
 
-import {useRouter,useRoute} from "vue-router";
+import {useRouter} from "vue-router";
 
-// useRouter()是用来跳转路由
+// useRouter()用来跳转路由
 const router = useRouter();
 
+// 跳转到对于的编辑页面
 const toEdit =(editKey:string,editName:string, currentValue:string)=>{
   router.push({
     path:'/user/edit',
