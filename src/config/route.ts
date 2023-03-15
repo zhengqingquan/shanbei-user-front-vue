@@ -6,6 +6,7 @@ import TeamPage from "../pages/TeamPage.vue";
 import UserPage from "../pages/UserPage.vue";
 import SearchPage from "../pages/SearchPage.vue";
 import UserEditPage from "../pages/EditUserPage.vue";
+import LoginPage from "../pages/LoginPage.vue";
 import WorldMapPage from "../pages/WorldMapPage.vue"
 
 
@@ -13,6 +14,7 @@ import WorldMapPage from "../pages/WorldMapPage.vue"
 // 每个路由都需要映射到一个组件。
 const routes = [
   { path: "/", component: Index },
+  { path: "/login", component: LoginPage },
   { path: "/team", component: TeamPage },
   { path: "/user", component: UserPage },
   { path: "/search", component: SearchPage },
