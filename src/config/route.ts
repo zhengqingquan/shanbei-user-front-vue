@@ -6,7 +6,7 @@ import TeamPage from "../pages/TeamPage.vue";
 import UserPage from "../pages/UserPage.vue";
 import SearchPage from "../pages/SearchPage.vue";
 import UserEditPage from "../pages/EditUserPage.vue";
-import WorldMap from "../pages/WorldMap.vue"
+import WorldMapPage from "../pages/WorldMapPage.vue"
 
 
 // 定义一些路由
@@ -17,8 +17,8 @@ const routes = [
   { path: "/user", component: UserPage },
   { path: "/search", component: SearchPage },
   // 动态路由
-  { path:"/user/edit/:",component: UserEditPage }
-  // {path:"/WorldMap",component: WorldMap},
+  { path:"/user/edit/:",component: UserEditPage },
+  {path:"/worldmap",component: WorldMapPage},
 ];
 
 
