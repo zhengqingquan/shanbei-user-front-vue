@@ -17,7 +17,7 @@ const routes = [
   { path: "/user", component: UserPage },
   { path: "/search", component: SearchPage },
   // 动态路由
-  { path:"/user/edit/:",component: UserEditPage },
+  { path:"/user/edit",component: UserEditPage },
   {path:"/worldmap",component: WorldMapPage},
 ];
 

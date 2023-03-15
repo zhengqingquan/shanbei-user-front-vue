@@ -8,6 +8,7 @@
           :name="editUser.editKey"
           :label="editUser.editName"
           :placeholder="`请输入${editUser.editName}`"
+          :rules="[{ required: true, message: '请填写用户名' }]"
       />
 
       <!--提交按钮-->

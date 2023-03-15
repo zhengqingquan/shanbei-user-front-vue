@@ -9,7 +9,6 @@ import MyDivider from "./components/MyDivider.vue";
 
   <BasicLayout/>
 
-
   <!--分隔符-->
   <my-divider/>
 </template>
