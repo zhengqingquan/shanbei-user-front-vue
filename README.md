@@ -8,7 +8,7 @@ shanbei-user-front-vue
 
 框架：[Vue3](https://cn.vuejs.org/)
 
-组件库：[Vant](https://vant-ui.github.io/vant/?#/zh-CN)
+组件库：[Vant-移动端组件库](https://vant-ui.github.io/vant/?#/zh-CN)
 
 语言：[TypeScript](https://www.typescriptlang.org/)
 
