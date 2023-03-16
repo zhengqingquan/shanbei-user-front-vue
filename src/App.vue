@@ -1,3 +1,5 @@
+<!--项目根组件-->
+
 <script setup lang="ts">
 import BasicLayout from "./layouts/BasicLayout.vue";
 import MyDivider from "./components/MyDivider.vue";
@@ -6,7 +8,6 @@ import MyDivider from "./components/MyDivider.vue";
 <template>
 
   <BasicLayout/>
-
 
   <!--分隔符-->
   <my-divider/>
