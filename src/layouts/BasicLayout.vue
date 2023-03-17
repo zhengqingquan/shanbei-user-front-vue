@@ -1,8 +1,10 @@
 <template>
-  <!--顶部-Search搜索-->
+  <!--顶部-NavBar导航栏-->
   <van-nav-bar
-      title="标题"
+      title="shanbei"
       left-arrow
+      fixed=fixed
+      placeholder="placeholder"
       @click-left="onClickLeft"
       @click-right="onClickRight"
   >
