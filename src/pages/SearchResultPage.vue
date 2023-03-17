@@ -5,7 +5,7 @@
       v-for="user in userList"
       num="2"
       price="2.00"
-      :desc="user.profile"
+      v-bind:desc="user.profile"
       :title="`${user.username}` `${user.username}`"
       thumb="https://fastly.jsdelivr.net/npm/@vant/assets/ipad.jpeg"
       :tag="123"
@@ -41,6 +41,7 @@ const mockUser={
   gender: "男",
   phone: "123",
   email: "@qq.com",
+  profile:"用户简介",
   createTime: new Date(),
 }
 

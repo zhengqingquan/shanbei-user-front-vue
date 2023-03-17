@@ -25,10 +25,14 @@
   </van-form>
 </template>
 
-<script>
-export default {
-  name: "LoginPage"
-}
+<script setup>
+import { ref } from 'vue';
+
+const username = ref('');
+const password = ref('');
+const onSubmit = (values) => {
+  console.log('submit', values);
+};
 </script>
 
 <style scoped>

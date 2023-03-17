@@ -2,16 +2,15 @@
 import * as VueRouter from "vue-router";
 
 import Index from "../pages/Index.vue";
+import LoginPage from "../pages/LoginPage.vue";
 import TeamPage from "../pages/TeamPage.vue";
 import UserPage from "../pages/UserPage.vue";
-import SearchPage from "../pages/SearchPage.vue";
 import UserEditPage from "../pages/EditUserPage.vue";
-import LoginPage from "../pages/LoginPage.vue";
+import SearchPage from "../pages/SearchPage.vue";
+import SearchResultPage from "../pages/SearchResultPage.vue"
 import WorldMapPage from "../pages/WorldMapPage.vue"
 
 
-import WorldMap from "../pages/WorldMap.vue"
-import SearchResultPage from "../pages/SearchResultPage.vue"
 // 定义一些路由
 // 每个路由都需要映射到一个组件。
 const routes = [
@@ -20,12 +19,10 @@ const routes = [
   { path: "/team", component: TeamPage },
   { path: "/user", component: UserPage },
   { path: "/search", component: SearchPage },
+  {path:"/search/result",component: SearchResultPage},
   // 动态路由
   { path:"/user/edit",component: UserEditPage },
   {path:"/worldmap",component: WorldMapPage},
-  {path:"/user/edit/:",component: UserEditPage},
-  // {path: "/user/list",component: SearchResultPage}
-  // {path:"/WorldMap",component: WorldMap},
 ];
 
 
