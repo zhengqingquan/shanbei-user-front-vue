@@ -8,7 +8,7 @@
 </template>
 
 <script setup>
-import BaiduMap from 'vue-baidu-map/components/map/Map.vue'
+// import BaiduMap from 'vue-baidu-map/components/map/Map.vue'
 
 </script>
 

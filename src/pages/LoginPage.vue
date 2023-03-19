@@ -1,23 +1,25 @@
 <template>
   <van-form @submit="onSubmit">
     <van-cell-group inset>
+      <!--其中name是英文字段名称-->
       <van-field
-          v-model="username"
-          name="用户名"
-          label="用户名"
-          placeholder="用户名"
+          v-model="userAccount"
+          name="userAccount"
+          label="账号"
+          placeholder="请输入账号"
           :rules="[{ required: true, message: '请填写用户名' }]"
       />
       <van-field
-          v-model="password"
+          v-model="userPassword"
           type="password"
-          name="密码"
+          name="userPassword"
           label="密码"
-          placeholder="密码"
+          placeholder="请输入密码"
           :rules="[{ required: true, message: '请填写密码' }]"
       />
     </van-cell-group>
     <div style="margin: 16px;">
+      <!--native-type表示这个按钮是触发提交事件的按钮-->
       <van-button round block type="primary" native-type="submit">
         提交
       </van-button>
@@ -27,11 +29,30 @@
 
 <script setup>
 import { ref } from 'vue';
+import myAxios from "../plugins/myAxios.js";
+import {Toast} from "vant";
+import {useRouter} from "vue-router";
 
-const username = ref('');
-const password = ref('');
-const onSubmit = (values) => {
+const router= useRouter();
+
+// 用户账号，默认值为空字符串。
+const userAccount = ref('');
+// 用户密码，默认值为空字符串。
+const userPassword = ref('');
+
+const onSubmit = async (values) => {
   console.log('submit', values);
+  const res = await myAxios.post('/user/login',{
+    userAccount:userAccount.value,
+    userPassword:userPassword.value,
+  })
+  console.log(res,'用户等各路');
+  if (res.code ===0 && res.data){
+    Toast.success('登录成功');
+    router.replace('/');
+  }else {
+    Toast.fail('登录失败');
+  }
 };
 </script>
 
