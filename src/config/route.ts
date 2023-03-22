@@ -9,7 +9,7 @@ import UserEditPage from "../pages/EditUserPage.vue";
 import SearchPage from "../pages/SearchPage.vue";
 import SearchResultPage from "../pages/SearchResultPage.vue"
 import WorldMapPage from "../pages/WorldMapPage.vue"
-
+import ShowPost from "../pages/ShowPost.vue"
 
 // 定义一些路由
 // 每个路由都需要映射到一个组件。
@@ -23,6 +23,7 @@ const routes = [
   // 动态路由
   { path:"/user/edit",component: UserEditPage },
   {path:"/worldmap",component: WorldMapPage},
+  {path: "/showpost",component: ShowPost}
 ];
 
 

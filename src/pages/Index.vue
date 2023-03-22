@@ -3,9 +3,7 @@
 <template>
   <van-card
       v-for="user in userList"
-      num="2"
-      price="2.00"
-      v-bind:desc="user.profile"
+      :desc="user.profile"
       :title="`${user.username}` `${user.username}`"
       thumb="https://fastly.jsdelivr.net/npm/@vant/assets/ipad.jpeg"
       :tag="123"
@@ -32,7 +30,9 @@ import myAxios from "../plugins/myAxios.js";
 import {Toast} from "vant";
 import qs from "qs";
 
-const route=useRoute();
+// useRoute()是一个用于获取当前路由信息的Hook，它返回一个包含当前路由信息的对象，例如当前页面的路径、查询参数等。
+// 可以使用它来获取当前路由信息并在组件中进行逻辑判断或展示。
+const route = useRoute();
 
 const {tags}=route.query;
 
@@ -42,10 +42,10 @@ const userList=ref([mockUser]);
 // 当这个页面的dom元素加载好之后。可以执行从远程获取数据的方法。
 onMounted(async ()=>{
 // 向给定ID的用户发起请求
-//  下面的请求完全执行结束才得到userList
+// 下面的请求完全执行结束才得到userList
   const userList = await myAxios.get('/user/recommend',{
     params:{
-      tagNameList:tags
+      tagNameList:tags,
       pageSize:8,
       pageNum:1,
     },
@@ -66,6 +66,7 @@ onMounted(async ()=>{
       })
       .then(function () {
         // 总是会执行
+        console.log('总是执行的请求')
       });
 
   if (userList){

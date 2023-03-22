@@ -18,8 +18,8 @@
 </template>
 
 <script setup lang="ts">
-
 import {onMounted, ref} from "vue";
+import {getCurrentUser} from "../services/user";
 
 // const user = {
 //   id: 1,
@@ -33,8 +33,6 @@ import {onMounted, ref} from "vue";
 // }
 
 const user = ref();
-
-import {getCurrentUser} from "../services/user";
 
 // 钩子函数，会在页面首次加载的时候执行。
 onMounted(async ()=>{

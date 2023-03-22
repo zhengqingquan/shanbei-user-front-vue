@@ -20,7 +20,7 @@
 
   <!--底部-Tabbar标签栏-->
   <van-tabbar route>
-    <van-tabbar-item to="/" icon="home-o" name="index">
+    <van-tabbar-item to="/index" icon="home-o" name="index">
       主页
     </van-tabbar-item>
     <van-tabbar-item to="/team" icon="search" name="team">

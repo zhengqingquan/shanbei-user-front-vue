@@ -26,7 +26,7 @@
 import {useRoute, useRouter} from "vue-router";
 import {onMounted, ref} from "vue";
 import {Toast} from "vant";
-import {getCurrentUser} from "../services/user.js";
+// import {getCurrentUser} from "../services/user.js";
 
 // 查看当前路由的信息
 const route = useRoute();
