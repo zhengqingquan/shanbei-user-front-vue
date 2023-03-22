@@ -18,7 +18,10 @@
 
 import axios from "axios";
 
-// 定义一个自己的baseURL
+/**
+ * 创建实例时配置默认值，定义一个自己的baseURL。
+ * @type {axios.AxiosInstance}
+ */
 const myAxios = axios.create({
     baseURL: 'http://localhost:8080'
 });
