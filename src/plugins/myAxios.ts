@@ -1,4 +1,9 @@
 /**
+ * zhengqingquan
+ * UTF-8
+ */
+
+/**
  * 一、通常浏览器会提供发送请求的API，例如：XMLHttpRequest、Fetch API或第三方库。
  * 而JavaScript在浏览器中调用各种浏览器API去发送HTTP请求、操作浏览历史、访问本地存储（比如文件上传）等。
  *
@@ -26,30 +31,53 @@ const myAxios = axios.create({
     baseURL: 'http://localhost:8080'
 });
 
-// 向后台发送请求的时候要携带上请求凭证。
+/**
+ * 向后台发送请求的时候要携带上请求凭证。
+ * 该值默认情况下为false。
+ * @type {boolean}
+ */
 myAxios.defaults.withCredentials = true;
 
-// 添加请求拦截器
-myAxios.interceptors.request.use(function (config) {
-    console.log("请求拦截器拦截了请求。", config)
+/**
+ * 添加请求拦截器
+ * 第一个参数是成功时的处理函数，第二个参数是失败时的处理函数。
+ * 成功时的处理函数接收一个配置对象，失败时的处理函数接收一个错误对象。
+ * 使用这个方法，您可以在发送请求之前对请求进行全局的处理。
+ * Axios拦截器允许在请求或响应被 then 或 catch 处理之前拦截它们。
+ */
+myAxios.interceptors.request.use(
     // 在发送请求之前做些什么
-    return config;
-}, function (error) {
+    function (config) {
+        console.log("请求拦截器拦截了请求。", config)
+        return config;
+    },
     // 对请求错误做些什么
-    return Promise.reject(error);
-});
+    function (error) {
+        console.log("请求拦截器拦截了请求，但发生了错误。", error)
+        return Promise.reject(error);
+    }
+);
 
-// 添加响应拦截器
-myAxios.interceptors.response.use(function (response) {
-    console.log("我收到了响应。", response)
-    // 2xx 范围内的状态码都会触发该函数。
-    // 对响应数据做点什么
-    return response.data;
-}, function (error) {
-    // 超出 2xx 范围的状态码都会触发该函数。
-    // 对响应错误做点什么
-    return Promise.reject(error);
-});
+/**
+ * 添加响应拦截器
+ * 第一个参数是成功时的处理函数，第二个参数是失败时的处理函数。
+ * 成功时的处理函数接收一个响应对象，失败时的处理函数接收一个错误对象。
+ * 使用这个方法，可以在发送请求后对响应进行全局的处理。
+ * Axios拦截器允许在请求或响应被 then 或 catch 处理之前拦截它们。
+ */
+myAxios.interceptors.response.use(
+    function (response) {
+        console.log("我收到了响应。", response)
+        // 2xx 范围内的状态码都会触发该函数。
+        // 对响应数据做点什么
+        return response.data;
+    }, function (error) {
+        // 超出 2xx 范围的状态码都会触发该函数。
+        // 对响应错误做点什么
+        console.log("我收到了响应。但响应错误。", error)
+        return Promise.reject(error);
+    }
+);
 
 export default myAxios;
 

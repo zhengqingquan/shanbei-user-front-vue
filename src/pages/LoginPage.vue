@@ -29,7 +29,7 @@
 
 <script setup>
 import {ref} from 'vue';
-import myAxios from "../plugins/myAxios.js";
+import myAxios from "../plugins/myAxios.ts";
 import {Toast} from "vant";
 import {useRouter} from "vue-router";
 
