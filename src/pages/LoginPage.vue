@@ -47,7 +47,7 @@ const onSubmit = async (values) => {
   console.log('submit', values);
   const res = await myAxios.post('/user/login', {
     userAccount: userAccount.value,
-    userPassword: userPassword.value,
+    usersPasword: userPassword.value,
   })
   console.log(res, '用户等各路');
   if (res.code === 0 && res.data) {

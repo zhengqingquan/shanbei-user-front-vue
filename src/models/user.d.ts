@@ -8,11 +8,12 @@ type UserType = {
     username: string;
     userAccount: string;
     avatarUrl?: string;
+    introduction?:string;
     gender: string;
     phone: string;
     email: string;
-    userStatus: number;
-    userRole: number;
     tags:string[];
+    userRole: number;
+    userStatus: number;
     createTime: Date;
 };
